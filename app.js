@@ -90,14 +90,21 @@ if(splitValue.length >= 4){
      //displayScreen.textContent = newTotal
 
     //display operand that made sum happen
-    let newOperand = e.target.textContent.trim()
-    operatorValue = newOperand
-    splitValue[0] = operatorValue
+    let newOperand = '';
+    newOperand= e.target.textContent.trim()
 
+    displayValueOne = total.toString();
+    splitValue[0] = displayValueOne
+    //operatorValue = newOperand
+    //splitValue[0] = operatorValue
+    splitValue[1] = displayValueTotal[displayValueTotal.length-3];
+    operatorValue = displayValueTotal[displayValueTotal.length-3]
     
 
-    splitValue.unshift(total)
-    displayValueOne = total;
+    //RIGHTHEREsplitValue.unshift(total)
+
+    splitValue[2] = displayValueTotal[displayValueTotal.length-1]
+    displayValueTwo = displayValueTotal[displayValueTotal.length-1]
 
     displayScreen.textContent = total+operatorValue
 
@@ -178,5 +185,5 @@ console.log(operate(6, '/', 5))
 threeButton.addEventListener('click', tryevent)
 
 function tryevent(e){
-    console.log(e.target.textContent)
+    console.log(e.target.textContent + 'hey')
 }
