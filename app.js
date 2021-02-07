@@ -76,7 +76,34 @@ let splitValue = displayValueTotal.split(' ');
  operatorValue = splitValue[1];
  displayValueTwo = splitValue[2];
 
+if(splitValue.length >= 4){
+    
+    //clear the array
+    splitValue = [ , , ];
 
+
+    //call sum 
+    total= operate(parseInt(displayValueOne), operatorValue, parseInt(displayValueTwo));
+
+     //clear screen and update with newtotal
+     displayScreen.textContent = ''
+     //displayScreen.textContent = newTotal
+
+    //display operand that made sum happen
+    let newOperand = e.target.textContent.trim()
+    operatorValue = newOperand
+    splitValue[0] = operatorValue
+
+    
+
+    splitValue.unshift(total)
+    displayValueOne = total;
+
+    displayScreen.textContent = total+operatorValue
+
+    
+    
+}
 
 console.log(splitValue)
 
@@ -148,3 +175,8 @@ equalsButton.addEventListener('click', sum);
 
 console.log(operate(6, '/', 5))
 
+threeButton.addEventListener('click', tryevent)
+
+function tryevent(e){
+    console.log(e.target.textContent)
+}
