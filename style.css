@@ -1,0 +1,433 @@
+*{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size:22px;
+    text-align: center;
+}
+
+
+
+body{
+position : absolute ;
+  left : 0px;
+  top : 0px;
+  width : 1440px;
+  height : 900px;
+}
+
+.calculatorshadow {
+    background : #AEADAD;
+    background : rgba(174, 173, 173, 1);
+    position : absolute ;
+    left : 450px;
+    top : 139px;
+    width : 522px;
+    height : 603px;
+    z-index:1;
+    margin:auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+}
+
+.calculator {
+    background : rgb(194, 194, 194);
+    background-repeat : no-repeat;
+    position : absolute ;
+    left : 459px;
+    top : 148px;
+    width : 522px;
+    height : 603px;
+    z-index:2;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+}
+
+.screen {
+    box-shadow: inset 0 0 10px #000000;
+    background : #46C077;
+    position : absolute ;
+    left : 485px;
+    top : 201px;
+    width : 471px;
+    height : 98px;
+    border-radius : 0px;
+    z-index:3;
+    line-height:98px;
+}
+
+.screenbackground {
+    background : #291919;
+    background : rgba(41, 25, 25, 1);
+    position : absolute ;
+    left : 478px;
+    top : 192px;
+    width : 485px;
+    height : 116px;
+    z-index:2
+}
+
+.add {
+    background : #4EBFBB;
+    background : #4EBFBB;
+    position : absolute ;
+    left : 505px;
+    top : 364px;
+    width : 64px;
+    height : 60px;
+    z-index:3;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+}
+.add:hover{
+    transform:scale(.95);
+}
+.add:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.subtract {
+    background : #4EBFBB;
+  position : absolute ;
+  left : 592px;
+  top : 364px;
+  width : 64px;
+  height : 60px;
+  z-index:4;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+  cursor:pointer;
+  transition: 0.2s all;
+  line-height: 60px;
+}
+.subtract:hover{
+  transform:scale(.95);
+}
+.subtract:active {
+  transform:scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.multiply {
+    background : #4EBFBB;
+    position : absolute ;
+    left : 679px;
+    top : 364px;
+    width : 64px;
+    height : 60px;
+    z-index:4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+}
+.multiply:hover{
+    transform:scale(.95);
+}
+.multiply:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.divide {
+    background :#4EBFBB;
+  position : absolute ;
+  left : 773px;
+  top : 364px;
+  width : 64px;
+  height : 60px;
+  z-index:4;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+  cursor:pointer;
+  transition: 0.2s all;
+  line-height: 60px;
+}
+.divide:hover{
+  transform:scale(.95);
+}
+.divide:active {
+  transform:scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.equals {
+    background : #BF6432;
+    position : absolute ;
+    left : 866px;
+    top : 365px;
+    width : 90px;
+    height : 317px;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 280px;
+}
+.equals:hover{
+    transform:scale(.95);
+}
+.equals:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.seven {
+    background : #46C077;
+    background : rgba(70, 192, 119, 1);
+    position : absolute ;
+    left : 505px;
+    top : 450px;
+    width : 64px;
+    height : 60px;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+}
+.seven:hover{
+    transform:scale(.95);
+}
+.seven:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.eight {
+    background : #46C077;
+    background : rgba(70, 192, 119, 1);
+    position : absolute ;
+    left : 592px;
+    top : 449px;
+    width : 64px;
+    height : 60px;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+}
+.eight:hover{
+    transform:scale(.95);
+}
+.eight:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.nine {
+    background : #46C077;
+    background : rgba(70, 192, 119, 1);
+    position : absolute ;
+    left : 679px;
+    top : 450px;
+    width : 64px;
+    height : 60px;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+}
+.nine:hover{
+    transform:scale(.95);
+}
+.nine:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.decimal {
+    background : #4EBFBB;
+    position : absolute ;
+    left : 773px;
+    top : 450px;
+    width : 64px;
+    height : 60px;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+}
+.decimal:hover{
+    transform:scale(.95);
+}
+.decimal:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.four{
+    background : #46C077;
+    position : absolute ;
+    left : 505px;
+    top : 536px;
+    width : 64px;
+    height : 60px;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+}
+.four:hover{
+    transform:scale(.95);
+}
+.four:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.five{
+    background : #46C077;
+    position : absolute ;
+    left : 592px;
+    top : 536px;
+    width : 64px;
+    height : 60px;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+}
+.five:hover{
+    transform:scale(.95);
+}
+.five:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.six{
+    background : #46C077;
+    position : absolute ;
+    left : 679px;
+    top : 536px;
+    width : 64px;
+    height : 60px;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+}
+.six:hover{
+    transform:scale(.95);
+}
+.six:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.clear {
+    background : #BF6432;
+    position : absolute ;
+    left : 773px;
+    top : 536px;
+    width : 64px;
+    height : 60px;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+    font-size:19px;
+}
+.clear:hover{
+    transform:scale(.95);
+}
+.clear:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+
+.one {
+    background : #46C077;
+    background : rgba(70, 192, 119, 1);
+    position : absolute ;
+    left : 505px;
+    top : 622px;
+    width : 64px;
+    height : 60px;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+}
+.one:hover{
+    transform:scale(.95);
+}
+.one:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.two {
+    background : #46C077;
+    background : rgba(70, 192, 119, 1);
+    position : absolute ;
+    left : 592px;
+    top : 622px;
+    width : 64px;
+    height : 60px;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+}
+.two:hover{
+    transform:scale(.95);
+}
+.two:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.three {
+    background : #46C077;
+    background : rgba(70, 192, 119, 1);
+    position : absolute ;
+    left : 679px;
+    top : 622px;
+    width : 64px;
+    height : 60px;
+    z-index:4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+}
+.three:hover{
+    transform:scale(.95);
+}
+.three:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+.zero {
+    background : #46C077;
+    background : rgba(70, 192, 119, 1);
+    position : absolute ;
+    left : 773px;
+    top : 622px;
+    width : 64px;
+    height : 60px;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
+    text-align: center;
+    cursor:pointer;
+    transition: 0.2s all;
+    line-height: 60px;
+}
+.zero:hover{
+    transform:scale(.95);
+}
+.zero:active {
+    transform:scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
