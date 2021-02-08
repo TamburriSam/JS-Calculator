@@ -51,6 +51,8 @@ let displayValueOne = 0;
 let displayValueTwo = 0;
 let operatorValue = '';
 
+let newTotal = ''
+
 
 
 
@@ -78,16 +80,21 @@ let splitValue = displayValueTotal.split(' ');
 
 if(splitValue.length >= 4){
     
+//MAYBE A FOR LOOP
+
     //clear the array
     splitValue = [ , , ];
 
 
     //call sum 
-    total= operate(parseInt(displayValueOne), operatorValue, parseInt(displayValueTwo));
-
+    total= operate(parseInt(displayValueOne), operatorValue, parseInt(displayValueTwo)); 
+       
      //clear screen and update with newtotal
+
+     //GRAB ELEMENT BY ID. GRAB DISPLAYSCREENS CONTENT WHEN FINAL OUTPUT IS THERE AND MAKE IT EQUAL TO DISPLAYVALONE
      displayScreen.textContent = ''
      //displayScreen.textContent = newTotal
+
 
     //display operand that made sum happen
     let newOperand = '';
@@ -95,8 +102,9 @@ if(splitValue.length >= 4){
 
     displayValueOne = total.toString();
     splitValue[0] = displayValueOne
-    //operatorValue = newOperand
-    //splitValue[0] = operatorValue
+    
+
+    //NOT GOING TO WORK- IF DIGIT IS MORE THAN 1 IT ONLY GRABS ONE
     splitValue[1] = displayValueTotal[displayValueTotal.length-3];
     operatorValue = displayValueTotal[displayValueTotal.length-3]
     
@@ -106,10 +114,10 @@ if(splitValue.length >= 4){
     splitValue[2] = displayValueTotal[displayValueTotal.length-1]
     displayValueTwo = displayValueTotal[displayValueTotal.length-1]
 
-    displayScreen.textContent = total+operatorValue
+    
 
-    
-    
+    displayScreen.textContent = total+operatorValue+displayValueTwo
+
 }
 
 console.log(splitValue)
@@ -122,6 +130,7 @@ function clearDisplay(){
     displayValueOne = 0;
     displayValueTwo = 0;
     operatorValue = '';
+    total = 0;
 }
 
 
@@ -160,14 +169,14 @@ function operate(displayValueOne, operatorValue, displayValueTwo){
 }
 
 function sum(){
-   total= operate(parseInt(displayValueOne), operatorValue, parseInt(displayValueTwo));
+   total = operate(parseInt(displayValueOne), operatorValue, parseInt(displayValueTwo));
     //displayValueOne = total;
     displayValueTotal = total;
     displayValueOne = total;
    return displayScreen.innerHTML = total;
 }
 
-let total = 0;
+let total = '';
 
 
 
