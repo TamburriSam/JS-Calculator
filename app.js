@@ -42,7 +42,6 @@ divideButton.addEventListener('click', populateDisplay)
 decButton.addEventListener('click', populateDisplay)
 
 
-
 let displayValueTotal = '';
 
 let displayValueOne = 0;
@@ -56,30 +55,30 @@ let newTotal = ''
 
 function populateDisplay(e){
     
-let selectedNum = e.target.textContent;
+    let selectedNum = e.target.textContent;
 
-displayValueTotal+=selectedNum;
+    displayValueTotal+=selectedNum;
     
-displayScreen.innerHTML += selectedNum;
+    displayScreen.innerHTML += selectedNum;
 
   
-let splitValue = displayValueTotal.split(' ');
+    let splitValue = displayValueTotal.split(' ');
 
- displayValueOne = splitValue[0];
- operatorValue = splitValue[1];
- displayValueTwo = splitValue[2];
+    displayValueOne = splitValue[0];
+    operatorValue = splitValue[1];
+    displayValueTwo = splitValue[2];
 
 
   if(splitValue.length>=5){
 
     
-    sum(); 
+        sum(); 
 
-    operatorValue = e.target.textContent
+        operatorValue = e.target.textContent
 
-    displayScreen.innerHTML = displayValueOne + operatorValue// + e.target.textContent;
+        displayScreen.innerHTML = displayValueOne + operatorValue// + e.target.textContent;
 
-    displayValueTotal = displayScreen.innerHTML
+      return  displayValueTotal = displayScreen.innerHTML
 
  }
 
@@ -114,7 +113,10 @@ function divide(num1, num2){
 }
 
 
-
+let backBtn = document.querySelector('.backbutton');
+backBtn.addEventListener('click', function(){
+   displayScreen.innerText = displayScreen.innerText.slice(0, -1);
+})
 
 
 function operate(displayValueOne, operatorValue, displayValueTwo){
@@ -125,14 +127,21 @@ function operate(displayValueOne, operatorValue, displayValueTwo){
     } else if (operatorValue === '*'){
         return multiply(displayValueOne,displayValueTwo)
     } else {
-        return divide(displayValueOne,displayValueTwo)
+        return divide(displayValueOne,displayValueTwo);   
     }
 }
 
 function sum(){
+
    total = operate(parseInt(displayValueOne), operatorValue, parseInt(displayValueTwo));
     displayValueTotal = total;
     displayValueOne = total;
+
+    if (displayScreen.innerHTML === 'Infinity' || displayScreen.innerHTML === 'NaN'){
+     return displayScreen.innerHTML = 'ERROR! YA DUN GOOFED';
+
+    }
+
    return displayScreen.innerHTML = total;
 }
 
@@ -141,3 +150,4 @@ let total = '';
 
 
 equalsButton.addEventListener('click', sum);
+
