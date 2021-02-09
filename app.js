@@ -32,6 +32,7 @@ eightButton.addEventListener('click', populateDisplay)
 nineButton.addEventListener('click', populateDisplay)
 zeroButton.addEventListener('click', populateDisplay)
 
+
 //operator events
 addButton.addEventListener('click', populateDisplay);
 subtractButton.addEventListener('click', populateDisplay)
@@ -114,10 +115,13 @@ function divide(num1, num2){
 
 
 let backBtn = document.querySelector('.backbutton');
-backBtn.addEventListener('click', function(){
+
+backBtn.addEventListener('click', backSpace)
+
+function backSpace(e){
     displayValueTotal = displayValueTotal.slice(0,-1);
    displayScreen.innerText = displayScreen.innerText.slice(0, -1);
-})
+}
 
 
 function operate(displayValueOne, operatorValue, displayValueTwo){
