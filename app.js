@@ -43,8 +43,6 @@ decButton.addEventListener('click', populateDisplay)
 
 
 
-
-
 let displayValueTotal = '';
 
 let displayValueOne = 0;
@@ -57,70 +55,33 @@ let newTotal = ''
 
 
 function populateDisplay(e){
-    //access the text inside the screen.
-let screenUpdate = displayScreen.innerHTML;
-
-
-    //access the pressed numbers value
+    
 let selectedNum = e.target.textContent;
 
 displayValueTotal+=selectedNum;
-    //update the screen with selected number
+    
 displayScreen.innerHTML += selectedNum;
 
-    //update the total value with the screens value
-//displayValueTotal=screenUpdate;
-
-
+  
 let splitValue = displayValueTotal.split(' ');
 
  displayValueOne = splitValue[0];
  operatorValue = splitValue[1];
  displayValueTwo = splitValue[2];
 
-if(splitValue.length >= 4){
-    
-//MAYBE A FOR LOOP
 
-    //clear the array
-    splitValue = [ , , ];
-
-
-    //call sum 
-    total= operate(parseInt(displayValueOne), operatorValue, parseInt(displayValueTwo)); 
-       
-     //clear screen and update with newtotal
-
-     //GRAB ELEMENT BY ID. GRAB DISPLAYSCREENS CONTENT WHEN FINAL OUTPUT IS THERE AND MAKE IT EQUAL TO DISPLAYVALONE
-     displayScreen.textContent = ''
-     //displayScreen.textContent = newTotal
-
-
-    //display operand that made sum happen
-    let newOperand = '';
-    newOperand= e.target.textContent.trim()
-
-    displayValueOne = total.toString();
-    splitValue[0] = displayValueOne
-    
-
-    //NOT GOING TO WORK- IF DIGIT IS MORE THAN 1 IT ONLY GRABS ONE
-    splitValue[1] = displayValueTotal[displayValueTotal.length-3];
-    operatorValue = displayValueTotal[displayValueTotal.length-3]
-    
-
-    //RIGHTHEREsplitValue.unshift(total)
-
-    splitValue[2] = displayValueTotal[displayValueTotal.length-1]
-    displayValueTwo = displayValueTotal[displayValueTotal.length-1]
+  if(splitValue.length>=5){
 
     
+    sum(); 
 
-    displayScreen.textContent = total+operatorValue+displayValueTwo
+    operatorValue = e.target.textContent
 
-}
+    displayScreen.innerHTML = displayValueOne + operatorValue// + e.target.textContent;
 
-console.log(splitValue)
+    displayValueTotal = displayScreen.innerHTML
+
+ }
 
 }
 
@@ -170,7 +131,6 @@ function operate(displayValueOne, operatorValue, displayValueTwo){
 
 function sum(){
    total = operate(parseInt(displayValueOne), operatorValue, parseInt(displayValueTwo));
-    //displayValueOne = total;
     displayValueTotal = total;
     displayValueOne = total;
    return displayScreen.innerHTML = total;
@@ -180,19 +140,4 @@ let total = '';
 
 
 
-//equal/operate
-//equalsButton.addEventListener('click', populateDisplay);
-
 equalsButton.addEventListener('click', sum);
-
-
-
-
-
-console.log(operate(6, '/', 5))
-
-threeButton.addEventListener('click', tryevent)
-
-function tryevent(e){
-    console.log(e.target.textContent + 'hey')
-}
