@@ -97,7 +97,7 @@ function clearDisplay(){
 clearButton.addEventListener('click', clearDisplay)
 
 function add(num1,num2){
-    return num1+num2
+    return Math.abs(num1+num2)
 }
 
 function subtract(num1,num2){
@@ -115,7 +115,7 @@ function divide(num1, num2){
 
 let backBtn = document.querySelector('.backbutton');
 backBtn.addEventListener('click', function(){
-    displayValueTotal = displayValueTotal.slice(0,-1)
+    displayValueTotal = displayValueTotal.slice(0,-1);
    displayScreen.innerText = displayScreen.innerText.slice(0, -1);
 })
 
@@ -134,7 +134,7 @@ function operate(displayValueOne, operatorValue, displayValueTwo){
 
 function sum(){
 
-   total = operate(parseInt(displayValueOne), operatorValue, parseInt(displayValueTwo));
+   total = operate(parseFloat(displayValueOne), operatorValue, parseFloat(displayValueTwo));
     displayValueTotal = total;
     displayValueOne = total;
 
