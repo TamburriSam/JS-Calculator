@@ -2,15 +2,18 @@
     font-family: 'IBM Plex Mono', monospace;
     font-size:22px;
     text-align: center;
+    
 }
 
+.container {
+    margin-top: 100px;
+}
 
-
-body{
-position : absolute ;
+body {
+  position : absolute ;
   left : 0px;
   top : 0px;
-  width : 1440px;
+  width : 1940px;
   height : 900px;
 }
 
@@ -50,6 +53,7 @@ position : absolute ;
     border-radius : 0px;
     z-index:3;
     line-height:98px;
+    font-size:35px;
 }
 
 .screenbackground {
@@ -151,15 +155,15 @@ position : absolute ;
 .equals {
     background : #BF6432;
     position : absolute ;
-    left : 866px;
-    top : 365px;
-    width : 90px;
-    height : 317px;
+    left : 873px;
+    top : 450px;
+    width : 64px;
+    height : 233px;
     z-index: 4;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
     cursor:pointer;
     transition: 0.2s all;
-    line-height: 280px;
+    line-height: 233px;
 }
 .equals:hover{
     transform:scale(.95);
@@ -433,21 +437,25 @@ position : absolute ;
 }
 
 .backbutton {
-    background : #46C077;
-    background : rgba(70, 192, 119, 1);
+    background :#4EBFBB;
     position : absolute ;
-    left : 773px;
-    top : 692px;
-    font-size:12px;
-    width : 32px;
-    height : 32px;
-    z-index: 4;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    left : 873px;
+    top : 364px;
+    width : 64px;
+    height : 60px;
+    z-index:4;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px 0px;
-    text-align: center;
     cursor:pointer;
     transition: 0.2s all;
-    line-height: 32px;
-
-
+    line-height: 60px;
 }
+
+#footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #46c0779c;
+    color: white;
+    text-align: center;
+  }
