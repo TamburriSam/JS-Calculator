@@ -115,6 +115,7 @@ function divide(num1, num2){
 
 let backBtn = document.querySelector('.backbutton');
 backBtn.addEventListener('click', function(){
+    displayValueTotal = displayValueTotal.slice(0,-1)
    displayScreen.innerText = displayScreen.innerText.slice(0, -1);
 })
 
